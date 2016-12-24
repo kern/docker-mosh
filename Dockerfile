@@ -58,6 +58,10 @@ RUN apt-get -q update && \
       unattended-upgrades && \
     apt-get clean
 
+RUN locale-gen en_US.UTF-8
+
+ENV LANG en_US.UTF-8
+
 EXPOSE 60001
 
 ENTRYPOINT ["mosh-server"]
